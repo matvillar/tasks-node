@@ -5,7 +5,7 @@ const taskSchema = mongoose.Schema(
     taskDescription: { type: String, required: true },
     taskPriority: { type: String, required: true },
     taskStatus: { type: String, required: true },
-    taskDueDate: { type: Date, required: true },
+    taskDueDate: { type: String, required: true },
   },
   { timestamps: true }
 );

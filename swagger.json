@@ -19,7 +19,38 @@
     "/tasks": {
       "post": {
         "description": "",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "taskTitle": {
+                  "type": "string",
+                  "example": "Task Title"
+                },
+                "taskDescription": {
+                  "type": "string",
+                  "example": "Task Description"
+                },
+                "taskPriority": {
+                  "type": "string",
+                  "example": "Task Priority"
+                },
+                "taskStatus": {
+                  "type": "string",
+                  "example": "Task Status"
+                },
+
+                "taskDueDate": {
+                  "type": "string",
+                  "example": "Task Due Date"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "201": {
             "description": "Created"
@@ -70,6 +101,36 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "taskTitle": {
+                  "type": "string",
+                  "example": "Task Title"
+                },
+                "taskDescription": {
+                  "type": "string",
+                  "example": "Task Description"
+                },
+                "taskPriority": {
+                  "type": "string",
+                  "example": "Task Priority"
+                },
+                "taskStatus": {
+                  "type": "string",
+                  "example": "Task Status"
+                },
+
+                "taskDueDate": {
+                  "type": "string",
+                  "example": "Task Due Date"
+                }
+              }
+            }
           }
         ],
         "responses": {
