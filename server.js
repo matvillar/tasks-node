@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
+const { check, validationResult } = require('express-validator');
 
 //Body parser order is 100% important
 app.use(bodyParser.json());

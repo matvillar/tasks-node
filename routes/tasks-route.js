@@ -1,8 +1,14 @@
 const router = require('express').Router();
 const taskController = require('../controllers/taskController');
+const validateTask = require('../utilities/task-validation');
 
 // Create a task
-router.post('/tasks', taskController.createTask);
+router.post(
+  '/tasks',
+  validateTask.validateTaskRules(),
+  validateTask.checkTaskData,
+  taskController.createTask
+);
 
 // Get all tasks
 router.get('/tasks', taskController.getAllTasks);
